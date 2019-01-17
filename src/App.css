@@ -1,0 +1,68 @@
+.App {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 10vmin;
+}
+
+.regex-parts {
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+}
+
+.regex-part {
+    border: 0.1em solid black;
+    border-radius: 0.2em;
+    background-color: #4e5563;
+    /*margin: 1em;*/
+    padding: 0.2em;
+    position: relative;
+    margin-right: 1em;
+}
+
+.regex-parts > :not(:last-child)::after {
+    content: '';
+    position: absolute;
+    width: 1em;
+    height: 0.1em;
+    left: calc(100% + 0.1em);
+    top: calc(50% - 0.05em);
+
+    background-color: black;
+}
+
+.regex-part.regex-capture-group {
+    border-color: #49d8f7;
+    width: auto;
+    position: relative;
+}
+
+.regex-part.regex-capture-group > input {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: none;
+    font-size: 1em;
+    border-radius: 0.1em;
+    border: none;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
